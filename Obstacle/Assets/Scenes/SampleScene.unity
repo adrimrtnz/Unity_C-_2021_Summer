@@ -263,6 +263,7 @@ GameObject:
   - component: {fileID: 548962986}
   - component: {fileID: 548962985}
   - component: {fileID: 548962988}
+  - component: {fileID: 548962989}
   m_Layer: 0
   m_Name: Wall_W
   m_TagString: Untagged
@@ -358,10 +359,22 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &548962989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548962983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea346c525d95cd14198b171d3d01a474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &558683839
 GameObject:
   m_ObjectHideFlags: 3
@@ -898,6 +911,7 @@ GameObject:
   - component: {fileID: 1237388844}
   - component: {fileID: 1237388843}
   - component: {fileID: 1237388846}
+  - component: {fileID: 1237388847}
   m_Layer: 0
   m_Name: Wall_S
   m_TagString: Untagged
@@ -993,10 +1007,22 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &1237388847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237388841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea346c525d95cd14198b171d3d01a474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1644245945
 GameObject:
   m_ObjectHideFlags: 0
@@ -1010,6 +1036,7 @@ GameObject:
   - component: {fileID: 1644245948}
   - component: {fileID: 1644245947}
   - component: {fileID: 1644245950}
+  - component: {fileID: 1644245951}
   m_Layer: 0
   m_Name: Wall_N
   m_TagString: Untagged
@@ -1105,10 +1132,22 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &1644245951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644245945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea346c525d95cd14198b171d3d01a474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1903110395
 GameObject:
   m_ObjectHideFlags: 0
@@ -1122,6 +1161,7 @@ GameObject:
   - component: {fileID: 1903110398}
   - component: {fileID: 1903110397}
   - component: {fileID: 1903110400}
+  - component: {fileID: 1903110401}
   m_Layer: 0
   m_Name: Wall_E
   m_TagString: Untagged
@@ -1217,7 +1257,19 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &1903110401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903110395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea346c525d95cd14198b171d3d01a474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
