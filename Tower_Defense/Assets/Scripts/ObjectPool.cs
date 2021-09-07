@@ -5,19 +5,50 @@ using UnityEngine;
 public class ObjectPool : MonoBehaviour
 {
     [SerializeField] GameObject enemyPrefab;
+    [SerializeField] int poolSize = 5;
     [SerializeField] float delayTimeInSeconds = 2f;
+
+    GameObject[] pool;
+
+    void Awake() 
+    {
+        PopulatePool();
+    }
 
     void Start()
     {
         StartCoroutine(SpawnEnemy());
     }
 
+    void PopulatePool()
+    {
+        pool = new GameObject[poolSize];
+
+        for(int i = 0; i < pool.Length; i++)
+        {
+            pool[i] = Instantiate(enemyPrefab, transform);
+            pool[i].SetActive(false);
+        }
+    }
+
     IEnumerator SpawnEnemy()
     {
         while(true)
         {
-            Instantiate(enemyPrefab, transform);
+            EnableObjectInPool();
             yield return new WaitForSeconds(delayTimeInSeconds);
+        }
+    }
+
+    void EnableObjectInPool()
+    {
+        foreach(GameObject enemy in pool)
+        {
+            if (enemy.activeInHierarchy == false)
+            {
+                enemy.SetActive(true);
+                return;
+            }
         }
     }
 
