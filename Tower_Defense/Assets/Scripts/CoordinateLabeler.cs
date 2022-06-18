@@ -74,8 +74,9 @@ public class CoordinateLabeler : MonoBehaviour
 
     void DisplayCoordinates()
     {
-        coordinates.x = Mathf.RoundToInt(transform.parent.position.x / UnityEditor.EditorSnapSettings.move.x / 40);
-        coordinates.y = Mathf.RoundToInt(transform.parent.position.z / UnityEditor.EditorSnapSettings.move.z / 40);
+        if(gridManager == null) { return; }
+        coordinates.x = Mathf.RoundToInt(transform.parent.position.x / gridManager.WorldGridSize);
+        coordinates.y = Mathf.RoundToInt(transform.parent.position.z / gridManager.WorldGridSize);
 
         label.text = coordinates.x + "," + coordinates.y;
     }

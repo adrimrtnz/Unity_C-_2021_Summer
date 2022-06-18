@@ -5,6 +5,9 @@ using UnityEngine;
 public class GridManager : MonoBehaviour
 {
     [SerializeField] Vector2Int gridSize;
+    [SerializeField] int worldGridSize;
+    public int WorldGridSize { get { return worldGridSize; } }
+
     Dictionary<Vector2Int, Node> grid = new Dictionary<Vector2Int, Node>();
     public Dictionary<Vector2Int, Node> Grid 
     {
@@ -19,6 +22,32 @@ public class GridManager : MonoBehaviour
     public Node GetNode(Vector2Int coordinates) 
     {
         return grid.ContainsKey(coordinates) ? grid[coordinates] : null;
+    }
+
+    public void BlockNode(Vector2Int coordinates)
+    {
+        if(grid.ContainsKey(coordinates))
+        {
+            grid[coordinates].isWalkable = false;
+        }
+    }
+
+    public Vector2Int GetCoordinatesFromPosition(Vector3 position)
+    {
+        Vector2Int coordinates = new Vector2Int();
+        coordinates.x = Mathf.RoundToInt(position.x / worldGridSize);
+        coordinates.y = Mathf.RoundToInt(position.z / worldGridSize);
+        
+        return coordinates;
+    }
+
+    public Vector3Int GetPositionFromCoordinates(Vector2 coordinates)
+    {
+        Vector3Int position = new Vector3Int();
+        position.x = Mathf.RoundToInt(coordinates.x * worldGridSize);
+        position.z = Mathf.RoundToInt(coordinates.y * worldGridSize);
+        
+        return position;
     }
 
     void CreateGrid()
